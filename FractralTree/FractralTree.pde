@@ -20,8 +20,8 @@ void branch(int d, int length, int x1, int y1, int x2, int y2)
     int newLength = length / 2;
 
     d++;
+    strokeWeight((depth - d) / 2);
     line(x1, y1, x2, y2);
-
     //right branch
     pushMatrix();
     translate(x2, y2);
