@@ -15,7 +15,7 @@ void draw()
     noLoop();
     background(backgroundColor);
     noFill();
-    translate(width / 2, height / 4);
+    translate(width / 2 + barWidthPyth / 2, height / 2 - shapeHeight + barWidthPyth / 2);
     drawTwoShapes(0, 0);
     translate(-barWidthPyth, barLengthPyth);
     rotate(radians(180));
@@ -24,7 +24,7 @@ void draw()
 
 void drawTwoShapes(int x, int y)
 {
-    drawShapePart(0, 0, 45);
+    drawShapePart(x, y, 45);
     drawShapePart(barLengthPyth / 2 - barWidthPyth / 2, shapeHeight, 135);
 }
 
