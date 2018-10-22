@@ -1,14 +1,14 @@
 public class Segment
 {
     boolean on = false;
-    int x, y, width, height;
+    int x, y, segmentWidth, segmentHeight;
     
-    public Segment(int x, int y, int width, int height)
+    public Segment(int x, int y, int segmentWidth, int segmentHeight)
     {
         this. x = x;
         this. y = y;
-        this. width = width;
-        this. height = height;
+        this. segmentWidth = segmentWidth;
+        this. segmentHeight = segmentHeight;
     }
     
     void draw()
@@ -20,7 +20,7 @@ public class Segment
         else
             fill(color(124, 10, 2));
             
-        rect(x, y, width, height);
+        rect(x, y, segmentWidth, segmentHeight);
     }
     
     void toggle()
@@ -33,8 +33,8 @@ public class Segment
         on = state;
     }
     
-    boolean clickedOn(int mouseX, int mouseY)
+    boolean clickedOn()
     {
-        return mouseX > x && mouseX < x + width && mouseY > y && mouseY < y + height;
+        return mouseX > x && mouseX < x + segmentWidth && mouseY > y && mouseY < y + segmentHeight;
     }
 }

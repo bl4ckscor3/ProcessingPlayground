@@ -31,7 +31,7 @@ void mousePressed()
 {
     for(Segment s : segments)
     {
-        if(s.clickedOn(mouseX, mouseY))
+        if(s.clickedOn())
         {
             s.toggle();
             break;
